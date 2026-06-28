@@ -10,6 +10,6 @@ public class PlayerHealth : MonoBehaviour, IPlayer
 
     private void Death()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        CheckpointManager.Instance.Respawn(gameObject);
     }
 }
